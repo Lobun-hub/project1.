@@ -9,21 +9,29 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <script src="https://kit.fontawesome.com/132246d049.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Navigation -->
     <header>
       <nav>
-        <h1>TasteBite</h1>
-        <ul>
+        <div class="logo">
+          <div class="logo-img">
+        <img src="images/Restaurant logo vintage retro style vector emblem….jpeg" alt="logo" class="logo-img" />
+          </div>
+          <div class="logo-text"><h1>TasteBite</h1></div>
+        </div>
+        <ul id="sidemenu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#menu">Menu</a></li>
           <li><a href="#special">Specials</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#gallery" class="hide">Gallery</a></li>
+          <li><a href="#testimonials" class="hide">Testimonials</a></li>
+          <li><a href="#contact" class="hide">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
       </nav>
     </header>
 
@@ -106,8 +114,18 @@
           <textarea placeholder="Your Message" required></textarea>
           <button type="submit" class="btn"><i class="fas fa-paper-plane"></i>Send Message</button>
         </form>
-     </section>
+      </section>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
 
+        function openmenu() {
+          sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+          sidemenu.style.right = "-200px";
+        }
+      </script>
 
     <!-- Footer -->
     <footer>
